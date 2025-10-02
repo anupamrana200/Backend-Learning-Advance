@@ -15,6 +15,12 @@ app.use(express.static("public")) //create a public assets which is used to stor
 
 app.use(cookieParser())
 
+//router import 
+import userRouter from "./routes/user.routes.js"
+
+//routes declaration
+app.use("/api/v1/users", userRouter)
+
 
 
 export { app }
